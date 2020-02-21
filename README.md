@@ -44,7 +44,6 @@ dependencies {
 			}
 		}
 		
-		// If all characters are valid, return null, otherwise only return the filtered characters
 		boolean allCharactersValid = (builder.length() == end - start);
 		return allCharactersValid ? null : builder.toString();
 	}
