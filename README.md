@@ -27,17 +27,18 @@ dependencies {
 ```
 ## Usage
 
- ### 1.To Use AlphabetInputFilter
+ ### 1.To Use AlphanumericInputFilter
        
  
-	@Override public CharSequence filter(CharSequence src, int start, int end, Spanned dst, int dstart, int dend)
+	@Override public CharSequence filter(CharSequence source, int start, int end, Spanned dest, int dstart, int dend)
 	{
+		
+		// Only keep characters that are alphanumeric
 		StringBuilder builder = new StringBuilder();
 		for(int i = start;i < end;i++)
 		{
-			char c = src.charAt(i);
-			if(Character.isLetter(c)||Character.isSpaceChar(c))
-      
+			char c = source.charAt(i);
+			if(Character.isLetterOrDigit(c))
 			{
 				builder.append(c);
 			}
